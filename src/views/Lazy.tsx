@@ -20,7 +20,7 @@ import ScrollToTopButton from '../components/ScrollToTopButton'
 import {AnimationOnScroll} from 'react-animation-on-scroll'
 
 const FlexItem = styled.div`
-    width:25%; /* Set the width to 25% of the container */
+    width:calc(25% + 20px); /* Set the width to 25% of the container */
     padding-bottom: 25%; /* Set the aspect ratio (1:1 for square) */
     position: relative; /* Create a relative position context for the image */
     border: 10px solid #242424;
@@ -39,12 +39,12 @@ const FlexItem = styled.div`
     }
 
     @media(max-width: 768px) {
-        width: 50%;
+        width: calc(50% + 20px);
         padding-bottom: 50%;
     }
 
     @media(max-width: 768px) {
-        width: 70%;
+        width: calc(70% + 20px);
         padding-bottom: 70%;
     }
 `
@@ -57,7 +57,7 @@ const H3 = styled.h3`
     transform: translateX(-50%);
     color: var(--blue);
 `
-
+ 
 const Lazy = () => {
     // Fixing on page load animation
     const [shouldAnimatePreScroll, setShouldAnimatePreScroll] = useState(false);
