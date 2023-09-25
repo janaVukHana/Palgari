@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 interface H2Props {
-    $color?: boolean
+    $color?: any
 }
 
 const H2 = styled.h2<H2Props>`
     font-size: 2rem;
     margin-bottom: 0.75rem;
-    color: ${props => props.$color && '#242424'};
+    color: ${props => props.$color ? props.$color : '#242424'};
 
     @media(max-width: 768px) {
         font-size: 1.625rem;

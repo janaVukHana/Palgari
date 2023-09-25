@@ -14,8 +14,7 @@ interface FlexProps {
 }
 
 const Flex = styled.div<FlexProps>`
-    min-height: 100vh;
-    min-height: ${props => props.$height ? props.$height : '100vh'};
+    min-height: ${props => props.$height ? props.$height : 'auto'};
     display: flex;
     flex-direction: ${props => props.$column ? 'column':'row'};
     justify-content: ${props => props.$justify};

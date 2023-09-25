@@ -7,17 +7,11 @@ import Flex from '../components/StyledComponents/Flex'
 import H1 from '../components/StyledComponents/H1'
 import Paragraph from '../components/StyledComponents/Paragraph'
 import Img from '../components/StyledComponents/Img'
-// import Section from './StyledComponents/Section'
-// import Container from './StyledComponents/Container'
-// import Flex from './StyledComponents/Flex'
-// import H1 from './StyledComponents/H1'
-// import Paragraph from './StyledComponents/Paragraph'
-// import Img from './StyledComponents/Img'
 
 import {Link} from 'react-scroll'
 import ScrollToTopButton from '../components/ScrollToTopButton'
-// import ScrollToTopButton from './ScrollToTopButton'
 import {AnimationOnScroll} from 'react-animation-on-scroll'
+import LazyDrop from '../components/LazyDrop'
 
 const FlexItem = styled.div`
     width:calc(25% + 20px); /* Set the width to 25% of the container */
@@ -72,7 +66,7 @@ const Lazy = () => {
     return (
         <> 
             <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} animatePreScroll={shouldAnimatePreScroll}>
-            <Section $mt>
+            <Section $mt  $height="100vh">
 
                 <Container>
                     <H1 $color="#fff">Bean Bag</H1>
@@ -83,8 +77,6 @@ const Lazy = () => {
                         space.
                     </Paragraph>
                 </Container>
-            </Section>
-            <Section $padding="0 0 2rem 0">
                 <Container>
                     <h2 style={{color: '#fff'}}>Explore Our Models</h2>
                     <Flex $height="auto" $justify="space-around" $gap>
@@ -112,19 +104,19 @@ const Lazy = () => {
             </Section>
             </AnimationOnScroll>
 
-            <Section id="lazy-drop" style={{minHeight: '100vh', backgroundColor: 'red', paddingTop: '150px'}}>
+            <Section id="lazy-drop" style={{backgroundColor: 'teal'}} $height="100vh" $padding="6rem 0 3rem">
                 <Container>
-                    <h2 style={{color: '#fff'}}>Lazy Drop</h2>
+                    <LazyDrop />
                 </Container>
             </Section>
 
-            <Section id="lazy-block" style={{minHeight: '100vh', backgroundColor: 'green', paddingTop: '150px'}}>
+            <Section id="lazy-block" $height="100vh" $padding="6rem 0 3rem">
                 <Container>
                     <h2 style={{color: '#fff'}}>Lazy Block</h2>
                 </Container>
             </Section>
 
-            <Section id="lazy-cloud" style={{minHeight: '100vh', backgroundColor: 'purple', paddingTop: '150px'}}>
+            <Section id="lazy-cloud" $height="100vh" $padding="6rem 0 3rem">
                 <Container>
                     <h2 style={{color: '#fff'}}>Lazy Cloud</h2>
                 </Container>
