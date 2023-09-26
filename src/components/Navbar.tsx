@@ -24,6 +24,7 @@ const Navigation = styled.nav<NavigationProps>`
     // HEIGHT is 0 on home page, and auto on all others
     height: ${props => props.$isHomePage ? '0' : 'auto'};
     overflow: ${props => props.$isHomePage ? 'hidden' : 'visible'};
+    box-shadow: 5px 5px 10px #242424;
 `
 
 const Container = styled.div`
