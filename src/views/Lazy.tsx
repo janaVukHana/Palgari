@@ -100,7 +100,7 @@ const Lazy = () => {
             </Section>
             </AnimationOnScroll>
 
-            <Section id="lazy-drop" style={{backgroundColor: '#242424'}} $height="100vh" $padding="6rem 0 3rem">
+            <Section id="lazy-drop" style={{backgroundColor: '#fff'}} $height="100vh" $padding="6rem 0 3rem">
                 <Container>
                     <LazyDrop />
                 </Container>

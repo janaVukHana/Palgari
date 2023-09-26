@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 interface H2Props {
-    $color?: any
+    $color?: string
+    $fontSize?: string
 }
 
 const H2 = styled.h2<H2Props>`
     font-size: 2rem;
+    font-size: ${props => props.$fontSize ? props.$fontSize : '2rem'};
     margin-bottom: 0.75rem;
     color: ${props => props.$color ? props.$color : '#242424'};
 
