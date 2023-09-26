@@ -22,6 +22,9 @@ const FlexItem = styled.div<FlexItemProps>`
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    border: 5px solid #fff;
+    border-top-width: 0;
+    border-bottom-width: 0;
 
     &:hover {
         background-color: #fff;
@@ -73,6 +76,13 @@ const FlexItem = styled.div<FlexItemProps>`
 
     &:hover a {
         transform: scale(1) translateX(-50%);
+    }
+
+    @media(max-width: 768px) {
+        border-top-width: 5px;
+        border-bottom-width: 5px;
+        border-right-width: 0;
+        border-left-width: 0;
     }
 `
 
@@ -145,7 +155,7 @@ const Home = () => {
         <Header>
             <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} animatePreScroll={shouldAnimatePreScroll}>
 
-            <Flex>
+            <Flex $height="100vh">
                 <FlexItem $img="lazy_1.jpg">
                     <H2>Bean Bag</H2>
                     <ParagraphTop className="top">Cozy</ParagraphTop>
