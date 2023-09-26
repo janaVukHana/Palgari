@@ -27,13 +27,21 @@ const Img = styled.img`
 const List = styled.ul`
     display: flex;
     list-style-type: none;
+    gap: 10px;
 `
 
 const ListItem = styled.li<ListItemProps>`
     background-color: ${props => props.$bgColor};
-    width: 50px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #242424;
+    border-radius: 50%;
     cursor: pointer;
+    transition: transform .3s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
 `
 
 const LazyDrop = () => {
@@ -60,8 +68,8 @@ const LazyDrop = () => {
     return (
         <Flex $gap $justify='start' >
             <FlexItem>
-                <H2 $color="#242424" $fontSize='4rem'>LazyDrop</H2>
-                <Paragraph $color="#343a40">
+                <H2 $color="var(--dark)" $fontSize='4rem'>Lazy Drop</H2>
+                <Paragraph $color="var(--dark-secondary)">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt adipisci assumenda sint numquam debitis 
                     odit unde placeat, incidunt odio animi sapiente asperiores alias dicta molestiae iusto eveniet 
                     consectetur exercitationem quibusdam eius minus, consequuntur qui illo rem. Delectus harum tempora 
