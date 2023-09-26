@@ -23,10 +23,6 @@ const FlexItem = styled.div`
     margin: 10px; /* Add some space around each item */
     transition: 0.3s linear;
     
-    // &:hover {
-    //     border-color: var(--green);
-    // }
-    
     &:hover ${Img} {
         transform: scale(1.05); /* Increase the size by 5% */
         cursor: pointer;
@@ -104,7 +100,7 @@ const Lazy = () => {
             </Section>
             </AnimationOnScroll>
 
-            <Section id="lazy-drop" style={{backgroundColor: 'teal'}} $height="100vh" $padding="6rem 0 3rem">
+            <Section id="lazy-drop" style={{backgroundColor: '#242424'}} $height="100vh" $padding="6rem 0 3rem">
                 <Container>
                     <LazyDrop />
                 </Container>
