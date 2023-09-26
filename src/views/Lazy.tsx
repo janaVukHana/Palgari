@@ -12,6 +12,7 @@ import {Link} from 'react-scroll'
 import ScrollToTopButton from '../components/ScrollToTopButton'
 import {AnimationOnScroll} from 'react-animation-on-scroll'
 import LazyDrop from '../components/LazyDrop'
+import H2 from '../components/StyledComponents/H2'
 
 const FlexItem = styled.div`
     width:calc(25% + 20px); /* Set the width to 25% of the container */
@@ -65,16 +66,16 @@ const Lazy = () => {
             <Section $mt  $height="100vh">
 
                 <Container>
-                    <H1 $color="#fff">Bean Bag</H1>
+                    <H1 $color="var(--dark)">Bean Bag</H1>
 
-                    <Paragraph $color="#fff">
+                    <Paragraph $color="var(--dark-secondary)">
                         Introducing our latest innovation in comfort and style the all-new bean bag with a cutting-edge design and 
                         top-quality craftsmanship. We've redefined relaxation with this contemporary addition to your living 
                         space.
                     </Paragraph>
                 </Container>
                 <Container>
-                    <h2 style={{color: '#fff'}}>Explore Our Models</h2>
+                    <h2 style={{color: 'var(--dark)'}}>Explore Our Models</h2>
                     <Flex $height="auto" $justify="space-around" $gap>
                         <FlexItem>
                             <H3>Lazy Drop</H3>
@@ -100,7 +101,7 @@ const Lazy = () => {
             </Section>
             </AnimationOnScroll>
 
-            <Section id="lazy-drop" style={{backgroundColor: '#fff'}} $height="100vh" $padding="6rem 0 3rem">
+            <Section id="lazy-drop" $height="100vh" $padding="6rem 0 3rem">
                 <Container>
                     <LazyDrop />
                 </Container>
@@ -108,13 +109,13 @@ const Lazy = () => {
 
             <Section id="lazy-block" $height="100vh" $padding="6rem 0 3rem">
                 <Container>
-                    <h2 style={{color: '#fff'}}>Lazy Block</h2>
+                    <H2 $fontSize='4rem' $color='var(--dark)'>Lazy Block</H2>
                 </Container>
             </Section>
 
             <Section id="lazy-cloud" $height="100vh" $padding="6rem 0 3rem">
                 <Container>
-                    <h2 style={{color: '#fff'}}>Lazy Cloud</h2>
+                    <H2 $fontSize='4rem' $color='var(--dark)'>Lazy Cloud</H2>
                 </Container>
             </Section>
 
