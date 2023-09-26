@@ -7,6 +7,8 @@
   --red: #DF2E38;
   --blue: #1A374D;
   --light-blue: #B1D0E0;
+  --dark: #242424;
+  --dark-secondary: #343a40;
 }
 
 /* General Styles */
@@ -25,6 +27,7 @@ html, body {
 body {
   font-family: "Alegreya Sans";
   background-color: var(--blue);
+  background-color: #fff;
   color: var(--blue);
   overflow-x: hidden;
   scroll-behavior: smooth;
