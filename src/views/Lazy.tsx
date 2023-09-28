@@ -11,8 +11,9 @@ import Img from '../components/StyledComponents/Img'
 import {Link} from 'react-scroll'
 import ScrollToTopButton from '../components/ScrollToTopButton'
 import {AnimationOnScroll} from 'react-animation-on-scroll'
-import LazyDrop from '../components/LazyDrop'
+import LazyBlock from '../components/LazyBlock'
 import H2 from '../components/StyledComponents/H2'
+import SquarePattern from '../components/SquarePattern'
 
 const FlexItem = styled.div`
     width:calc(25% + 20px); /* Set the width to 25% of the container */
@@ -20,7 +21,7 @@ const FlexItem = styled.div`
     position: relative; /* Create a relative position context for the image */
     border: 10px solid #242424;
     border-radius: 50%; /* Apply border radius */
-    overflow: hidden; /* Clip the image to the border radius */
+    // overflow: hidden; /* Clip the image to the border radius */
     margin: 10px; /* Add some space around each item */
     transition: 0.3s linear;
     
@@ -78,36 +79,39 @@ const Lazy = () => {
                     <h2 style={{color: 'var(--dark)'}}>Explore Our Models</h2>
                     <Flex $height="auto" $justify="space-around" $gap>
                         <FlexItem>
-                            <H3>Lazy Drop</H3>
-                            <Link to="lazy-drop" smooth="true" duration={500}>
-                                <Img src="./images/palgari/lazy_1.jpg" alt="lazy drop" />
-                            </Link>
-                        </FlexItem>
-                        <FlexItem>
                             <H3>Lazy Block</H3>
                             <Link to="lazy-block" smooth="true" duration={500}>
-                                <Img src="./images/palgari/lazy_2.jpg" alt="lazy drop" />
+                                <Img $circle src="./images/palgari/lazy_1.jpg" alt="lazy drop" />
                             </Link>
+                            <SquarePattern />
+                        </FlexItem>
+                        <FlexItem>
+                            <H3>Lazy Drop</H3>
+                            <Link to="lazy-drop" smooth="true" duration={500}>
+                                <Img $circle src="./images/palgari/lazy_2.jpg" alt="lazy drop" />
+                            </Link>
+                            <SquarePattern />
                         </FlexItem>
 
                         <FlexItem>
                             <H3>Lazy Cloud</H3>
                             <Link to="lazy-cloud" smooth="true" duration={500}>
-                                <Img src="./images/palgari/lazy_3.jpg" alt="lazy drop" />
+                                <Img $circle src="./images/palgari/lazy_3.jpg" alt="lazy drop" />
                             </Link>
+                            <SquarePattern />
                         </FlexItem>
                     </Flex>
                 </Container>
             </Section>
             </AnimationOnScroll>
 
-            <Section id="lazy-drop" $height="100vh" $padding="6rem 0 3rem">
+            <Section id="lazy-block" $height="100vh" $padding="6rem 0 3rem">
                 <Container>
-                    <LazyDrop />
+                    <LazyBlock />
                 </Container>
             </Section>
 
-            <Section id="lazy-block" $height="100vh" $padding="6rem 0 3rem">
+            <Section id="lazy-drop" $height="100vh" $padding="6rem 0 3rem">
                 <Container>
                     <H2 $fontSize='4rem' $color='var(--dark)'>Lazy Block</H2>
                 </Container>

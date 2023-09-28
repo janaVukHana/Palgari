@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import LazyBlock from '../LazyBlock';
 
 interface FlexProps {
     $column?: string; // Define the column prop

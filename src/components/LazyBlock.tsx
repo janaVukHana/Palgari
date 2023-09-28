@@ -45,8 +45,8 @@ const ListItem = styled.li<ListItemProps>`
     }
 `
 
-const LazyDrop = () => {
-    const [selectedImg, setSelectedImg] = useState('./images/lazyDropImg/black.png')
+const LazyBlock = () => {
+    const [selectedImg, setSelectedImg] = useState('./images/lazyBlockImg/black.png')
 
     const  handleClick = (newImg: string) => {
         setSelectedImg(newImg)  
@@ -55,10 +55,10 @@ const LazyDrop = () => {
     useEffect(() => {
         // Preload images
         const imagesToPreload = [
-            './images/lazyDropImg/black.png',
-            './images/lazyDropImg/blue.png',
-            './images/lazyDropImg/yellow.png',
-            './images/lazyDropImg/purple.png',
+            './images/lazyBlockImg/black.png',
+            './images/lazyBlockImg/blue.png',
+            './images/lazyBlockImg/yellow.png',
+            './images/lazyBlockImg/purple.png',
         ];
 
         imagesToPreload.forEach((img) => {
@@ -68,10 +68,10 @@ const LazyDrop = () => {
 
     return (
         
-        <Flex $gap $justify='start' >
+        <Flex $gap $justify='start'>
             <FlexItem>
                 <AnimationOnScroll animateIn="animate__fadeInLeft" duration={1.5} animateOnce={false} animatePreScroll={false}>
-                    <H2 $color="var(--dark)" $fontSize='4rem'>Lazy Drop</H2>
+                    <H2 $color="var(--dark)" $fontSize='4rem'>Lazy Block</H2>
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn="animate__fadeInLeft" duration={2} animateOnce={false} animatePreScroll={false}>
 
@@ -101,4 +101,4 @@ const LazyDrop = () => {
     )
 }
 
-export default LazyDrop;
+export default LazyBlock;
